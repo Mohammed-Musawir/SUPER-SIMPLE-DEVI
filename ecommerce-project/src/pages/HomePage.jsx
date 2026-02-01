@@ -4,6 +4,14 @@ import Checkmark from "../assets/images/checkmark.png";
 import "./HomePage.css";
 
 export function HomePage() {
+  fetch('http://localhost:3000/api/products')
+  .then((responce) => {
+      return responce.json();
+  })
+  .then((data) => {
+    console.log(data)
+  })
+
   return (
     <>
       <title>Ecommerce Project</title>
